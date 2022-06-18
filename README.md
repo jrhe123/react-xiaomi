@@ -50,14 +50,6 @@ with [Typescript](https://www.typescriptlang.org/), [Redux Toolkit](https://redu
 
 <!-- tocstop -->
 
-## About
-
-<div align="center">
-
-![about.gif](./_docs/img/about.gif)
-
-</div>    
-
 ### Features
 
 1. [React.js](https://reactjs.org/) CRUD example with Redux Saga.
@@ -136,10 +128,10 @@ with [Typescript](https://www.typescriptlang.org/), [Redux Toolkit](https://redu
 
 </details>
 <details>
-  <summary><a href="https://nodejs.org/en/">Node.js v17</a></summary>
+  <summary><a href="https://nodejs.org/en/">Node.js v16</a></summary>
 
   ```shell
-  nvm install v17.4.0
+  nvm install v16.15.0
   ```
 
 </details>
@@ -198,8 +190,6 @@ Run `yarn coverage` to generate code coverage.
 
 #### E2E tests
 
-![posts.spec.ts](./_docs/img/cypress.gif)
-
 To run e2e use below command:
 
 ```shell
@@ -214,7 +204,7 @@ yarn build && yarn test:e2e
 
 Start Storybook in development mode:
 
-```shell
+```shellf
 yarn storybook
 ```
 
@@ -252,10 +242,6 @@ enable **Use paths relative to tsconfig.json**.
 ## 😈 Release
 
 Create release version and generate a changelog file:
-
-```shell
-GITHUB_TOKEN=YOUR-TOKEN yarn release
-```
 
 > :bulb: **Tip:**  `--no-ci` - allows you to trigger release from no ci environment e.g. local
 
