@@ -1,1 +1,1 @@
-commitlint: [ 'buid', 'ci', 'chore', 'docs', 'feat', 'fix', 'perf', 'refactor', 'revert', 'style', 'test' ];
+commitlint: [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test]
