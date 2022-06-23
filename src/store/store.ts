@@ -34,8 +34,10 @@ const makeStore = () => {
   return store
 }
 
+// store & history
 export const store = makeStore()
 export const history = createReduxHistory(store)
 
+// types
 export type AppDispatch = typeof store.dispatch
 export type RootState = ReturnType<typeof store.getState>
