@@ -11,5 +11,6 @@ describe('Post API test - MSW example', () => {
 
     // Then
     expect(result).toEqual(posts)
+    expect(result[0].title).toEqual('Redux-Saga')
   })
 })
