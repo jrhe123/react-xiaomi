@@ -5,7 +5,6 @@ import TitleTypography from 'libs/ui/components/TitleTypography'
 
 const AboutPage = () => {
   const { t } = useTranslation()
-
   return <TitleTypography title={t('about.title')} />
 }
 

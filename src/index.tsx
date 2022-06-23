@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom'
 
 import App from 'App'
 import 'config/i18n'
+// reset
 import 'index.css'
 import reportWebVitals from 'reportWebVitals'
+// to-do: remove it
 import { initMockServiceWorker } from 'test/msw'
-
+//
 initMockServiceWorker()
 
 ReactDOM.render(
