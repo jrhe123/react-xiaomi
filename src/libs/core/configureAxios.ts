@@ -5,16 +5,17 @@ export default function makeApi(baseURL: string) {
     baseURL,
   })
 
+  // set content-type
   api.defaults.headers.post['Content-Type'] = 'application/json'
   api.defaults.headers.put['Content-Type'] = 'application/json'
   api.defaults.headers.delete['Content-Type'] = 'application/json'
 
   api.interceptors.request.use(
     config => {
-      if (localStorage.getItem('authToken')) {
+      if (localStorage.getItem('token')) {
         config.headers = {
           ...config.headers,
-          Authorization: `Bearer ${localStorage.getItem('authToken')}`,
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
         }
       }
       return config
