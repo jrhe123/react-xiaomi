@@ -1,9 +1,10 @@
 import React, { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
+// theme layout
 import Layout from 'components/Layout'
 
-//
+// pages
 const HomePage = React.lazy(() => import('pages/HomePage'))
 const AboutPage = React.lazy(() => import('pages/AboutPage'))
 
