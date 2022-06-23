@@ -65,11 +65,8 @@ module.exports = {
         unnamedComponents: "arrow-function",
       },
     ],
-
     "react/react-in-jsx-scope": "off",
-
     'jsx-a11y/anchor-is-valid': 'off',
-
     "no-param-reassign": 0,
     "@typescript-eslint/indent": ["error", 2],
     "@typescript-eslint/no-unused-vars": "error",
