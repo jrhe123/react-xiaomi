@@ -52,7 +52,7 @@ const Header = (props: HeaderProps) => {
             </Link>
             <ButtonGroup variant="text" color="inherit">
               <Button onClick={() => onChangeLanguage('en')}>🇺🇸</Button>
-              <Button onClick={() => onChangeLanguage('pl')}>🇵🇱</Button>
+              <Button onClick={() => onChangeLanguage('pl')}>🍔</Button>
             </ButtonGroup>
             <IconButton sx={{ ml: 1 }} onClick={onChangeThemeClick} color="inherit">
               {currentThemeMode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
