@@ -10,7 +10,7 @@ const AboutPage = React.lazy(() => import('pages/AboutPage'))
 
 const AppRoutes = () => (
   <>
-    <Suspense fallback={<div>Loading</div>}>
+    <Suspense fallback={<div />}>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
