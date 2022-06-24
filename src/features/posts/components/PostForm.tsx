@@ -17,7 +17,6 @@ export type PostFormProps = {
 
 export const PostForm = (props: PostFormProps) => {
   const { t } = useTranslation()
-
   const {
     defaultValues = {
       title: '',
@@ -28,9 +27,9 @@ export const PostForm = (props: PostFormProps) => {
 
   const newPostValidationSchema = Yup.object().shape({
     title: Yup.string()
-      .required(t('home.form.validation.title-required'))
-      .max(20, t('home.form.validation.title-max', { num: 20 })),
-    body: Yup.string().required(t('home.form.validation.body-required')),
+      .required(t('demo.form.validation.title-required'))
+      .max(20, t('demo.form.validation.title-max', { num: 20 })),
+    body: Yup.string().required(t('demo.form.validation.body-required')),
   })
 
   const methods = useForm<PostFormInput>({
@@ -41,13 +40,13 @@ export const PostForm = (props: PostFormProps) => {
 
   return (
     <Stack sx={{ pt: 0 }} direction="column" spacing={1} justifyContent="center">
-      <FormTextField name="title" label={t('home.form.title')} control={control} />
-      <FormTextField name="body" label={t('home.form.body')} control={control} />
+      <FormTextField name="title" label={t('demo.form.title')} control={control} />
+      <FormTextField name="body" label={t('demo.form.body')} control={control} />
       <Button onClick={handleSubmit(onSubmitClick)} variant={'contained'}>
-        {t('home.buttons.submit')}
+        {t('demo.buttons.submit')}
       </Button>
       <Button onClick={() => reset()} variant={'outlined'}>
-        {t('home.buttons.reset')}
+        {t('demo.buttons.reset')}
       </Button>
     </Stack>
   )
