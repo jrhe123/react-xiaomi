@@ -20,7 +20,7 @@ const makeStore = () => {
   //
   const sagaMiddleware = createSagaMiddleware()
   const middlewares = [sagaMiddleware, routerMiddleware]
-  if (!Env.isProd) middlewares.push(logger)
+  if (!Env.isProd()) middlewares.push(logger)
   //
   const store = configureStore({
     reducer: {
