@@ -6,7 +6,6 @@ import Layout from 'components/Layout'
 
 // pages
 const HomePage = React.lazy(() => import('pages/HomePage'))
-const AboutPage = React.lazy(() => import('pages/AboutPage'))
 
 const AppRoutes = () => (
   <>
@@ -15,7 +14,6 @@ const AppRoutes = () => (
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/posts" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
         </Route>
       </Routes>
     </Suspense>

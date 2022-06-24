@@ -17,17 +17,12 @@
       "update": "Update"
     }
   },
-  "about": {
-    "title": "About Page",
-    "back": "Back to Home"
-  },
   "company": {
     "title": "Company name"
   },
   "navigation": {
     "links": {
-      "home": "Home",
-      "about": "About"
+      "home": "Home"
     }
   }
 }

@@ -17,17 +17,12 @@
       "update": "Edytuj"
     }
   },
-  "about": {
-    "title": "O Nas",
-    "back": "Powrót do Strony Domowej"
-  },
   "company": {
     "title": "Nazwa Firmy"
   },
   "navigation": {
     "links": {
-      "home": "Strona Domowa",
-      "about": "O Nas"
+      "home": "Strona Domowa"
     }
   }
 }

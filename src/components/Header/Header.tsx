@@ -48,15 +48,6 @@ const Header = (props: HeaderProps) => {
             >
               {t('navigation.links.home')}
             </Link>
-            <Link
-              component={RouterLink}
-              to={'/about'}
-              variant="button"
-              color="text.primary"
-              sx={{ my: 1, mx: 1.5 }}
-            >
-              {t('navigation.links.about')}
-            </Link>
             {/* <ButtonGroup variant="text" color="inherit">
               <Button onClick={() => onChangeLanguage('en')}>🇺🇸</Button>
               <Button onClick={() => onChangeLanguage('pl')}>🍔</Button>
