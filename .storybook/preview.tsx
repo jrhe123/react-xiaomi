@@ -19,7 +19,7 @@ export const parameters = {
   locale: 'en',
   locales: {
     en: { title: 'English', left: '🇺🇸' },
-    pl: { title: 'Polish', left: '🍔' },
+    // pl: { title: 'Polish', left: '🍔' },
   },
 }
 

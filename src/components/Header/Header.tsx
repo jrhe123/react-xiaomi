@@ -1,6 +1,11 @@
 import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
-import { Button, ButtonGroup, IconButton, Link } from '@mui/material'
+import {
+  // Button,
+  // ButtonGroup,
+  IconButton,
+  Link,
+} from '@mui/material'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
@@ -16,9 +21,11 @@ type HeaderProps = {
 
 const Header = (props: HeaderProps) => {
   const { t } = useTranslation()
-
-  const { currentThemeMode, onChangeThemeClick, onChangeLanguage } = props
-
+  const {
+    currentThemeMode,
+    onChangeThemeClick,
+    // onChangeLanguage
+  } = props
   return (
     <>
       <AppBar
@@ -50,10 +57,10 @@ const Header = (props: HeaderProps) => {
             >
               {t('navigation.links.about')}
             </Link>
-            <ButtonGroup variant="text" color="inherit">
+            {/* <ButtonGroup variant="text" color="inherit">
               <Button onClick={() => onChangeLanguage('en')}>🇺🇸</Button>
               <Button onClick={() => onChangeLanguage('pl')}>🍔</Button>
-            </ButtonGroup>
+            </ButtonGroup> */}
             <IconButton sx={{ ml: 1 }} onClick={onChangeThemeClick} color="inherit">
               {currentThemeMode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
             </IconButton>
