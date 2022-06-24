@@ -4,15 +4,14 @@ import { useTranslation } from 'react-i18next'
 import { PostContainer } from 'features/posts'
 import TitleTypography from 'libs/ui/components/TitleTypography'
 
-const HomePage = () => {
+const DemoPage = () => {
   const { t } = useTranslation()
-
   return (
     <>
-      <TitleTypography title={t('home.title')} />
+      <TitleTypography title={t('demo.title')} />
       <PostContainer />
     </>
   )
 }
 
-export default HomePage
+export default DemoPage

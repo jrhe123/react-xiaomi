@@ -5,15 +5,14 @@ import { Route, Routes } from 'react-router-dom'
 import Layout from 'components/Layout'
 
 // pages
-const HomePage = React.lazy(() => import('pages/HomePage'))
+const DemoPage = React.lazy(() => import('pages/DemoPage'))
 
 const AppRoutes = () => (
   <>
     <Suspense fallback={<div />}>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/posts" element={<HomePage />} />
+          <Route path="/" element={<DemoPage />} />
         </Route>
       </Routes>
     </Suspense>

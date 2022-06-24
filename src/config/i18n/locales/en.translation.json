@@ -1,5 +1,5 @@
 {
-  "home": {
+  "demo": {
     "title": "Posts",
     "form": {
       "title": "title",
@@ -22,7 +22,7 @@
   },
   "navigation": {
     "links": {
-      "home": "Home"
+      "demo": "Demo"
     }
   }
 }
