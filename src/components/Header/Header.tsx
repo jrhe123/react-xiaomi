@@ -46,7 +46,7 @@ const Header = (props: HeaderProps) => {
               color="text.primary"
               sx={{ my: 1, mx: 1.5 }}
             >
-              {t('navigation.links.home')}
+              {t('navigation.links.demo')}
             </Link>
             {/* <ButtonGroup variant="text" color="inherit">
               <Button onClick={() => onChangeLanguage('en')}>🇺🇸</Button>
