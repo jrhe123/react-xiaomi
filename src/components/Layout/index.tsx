@@ -1,14 +1,15 @@
 import { CssBaseline, ThemeProvider } from '@mui/material'
 import Box from '@mui/material/Box'
 import { createTheme } from '@mui/material/styles'
-import React from 'react'
+import React, { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Outlet } from 'react-router-dom'
 
+//
 import Header from 'components/Header/Header'
 
 const Layout = () => {
-  const [mode, setMode] = React.useState<'light' | 'dark'>('light')
+  const [mode, setMode] = useState<'light' | 'dark'>('light')
   const { i18n } = useTranslation()
 
   // TODO: move state to redux
@@ -16,7 +17,7 @@ const Layout = () => {
     i18n.changeLanguage(lang)
   }
 
-  const colorMode = React.useMemo(
+  const colorMode = useMemo(
     () => ({
       toggleColorMode: () => {
         setMode(prevMode => (prevMode === 'light' ? 'dark' : 'light'))
@@ -25,18 +26,35 @@ const Layout = () => {
     [],
   )
 
-  const theme = React.useMemo(
+  const theme = useMemo(
     () =>
       createTheme({
         palette: {
           mode,
+          primary: {
+            light: '#fff',
+            main: '#fff',
+            dark: '#fff',
+            contrastText: '#000',
+          },
+          secondary: {
+            light: '#757ce8',
+            main: '#5852DA',
+            dark: '#002884',
+            contrastText: '#fff',
+          },
         },
       }),
     [mode],
   )
 
   return (
-    <>
+    <Box
+      sx={{
+        bgcolor: '#EBEDF1',
+        height: '100vh',
+      }}
+    >
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Header
@@ -45,18 +63,12 @@ const Layout = () => {
           onChangeLanguage={onChangeLanguage}
         />
         <main>
-          <Box
-            sx={{
-              bgcolor: 'background.paper',
-              pt: 3,
-              pb: 3,
-            }}
-          >
+          <Box>
             <Outlet />
           </Box>
         </main>
       </ThemeProvider>
-    </>
+    </Box>
   )
 }
 
