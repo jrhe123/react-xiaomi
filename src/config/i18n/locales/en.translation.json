@@ -17,10 +17,12 @@
       "update": "Update"
     }
   },
-  "company": {
-    "title": "Company name"
-  },
   "navigation": {
+    "language": "language",
+    "language-list": {
+      "en": "English",
+      "fr": "French"
+    },
     "links": {
       "demo": "Demo"
     }

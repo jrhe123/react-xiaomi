@@ -1,10 +1,17 @@
 import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
-import { IconButton } from '@mui/material'
+import {
+  // Button,
+  // ButtonGroup,
+  IconButton,
+  Link,
+} from '@mui/material'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
+import Typography from '@mui/material/Typography'
 import React from 'react'
-// import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
+import { NavLink as RouterLink } from 'react-router-dom'
 
 type HeaderProps = {
   currentThemeMode: 'light' | 'dark'
@@ -13,7 +20,7 @@ type HeaderProps = {
 }
 
 const Header = (props: HeaderProps) => {
-  // const { t } = useTranslation()
+  const { t } = useTranslation()
   const {
     currentThemeMode,
     onChangeThemeClick,
@@ -28,7 +35,23 @@ const Header = (props: HeaderProps) => {
         sx={{ borderBottom: theme => `1px solid ${theme.palette.divider}` }}
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
+          <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
+            {t('company.title')}
+          </Typography>
           <nav>
+            <Link
+              component={RouterLink}
+              to={'/'}
+              variant="button"
+              color="text.primary"
+              sx={{ my: 1, mx: 1.5 }}
+            >
+              {t('navigation.links.demo')}
+            </Link>
+            {/* <ButtonGroup variant="text" color="inherit">
+              <Button onClick={() => onChangeLanguage('en')}>🇺🇸</Button>
+              <Button onClick={() => onChangeLanguage('pl')}>🍔</Button>
+            </ButtonGroup> */}
             <IconButton sx={{ ml: 1 }} onClick={onChangeThemeClick} color="inherit">
               {currentThemeMode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
             </IconButton>
